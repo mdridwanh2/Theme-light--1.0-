@@ -1,0 +1,130 @@
+/* google font here */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ************************************************************************************ */
+/* help css starts here */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-transform: capitalize;
+    color: var(--primary-color);
+}
+.container{
+    max-width: 1270px;
+    padding: 0 3%;
+    margin: auto;
+}
+:root{
+    --primary-font: 'Roboto', sans-serif;
+    --second-font: 'Open Sans', sans-serif;
+    --primary-color: #000;
+    --second-color: #077e9c;
+}
+/* help css ends here */
+/* ************************************************************************************ */
+
+
+
+
+
+
+
+/* ************************************************************************************* */
+/* NAV-BAR STARTS HERE */
+
+#nav-bar{
+    background-color: #f7f8f8;
+}
+.logo{
+    font-size: 35px;
+    font-weight: 500;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--second-color);
+    padding: 5px 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    display: inline-block;
+    font-size: 18px;
+}
+nav ul li:not(:last-child){
+    margin-right: 15px;
+}
+nav ul li a{
+    font-size: 19px;
+    font-weight: 500;
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    transition: all 0.50s ease-in;
+}
+.active{
+    color: var(--second-color);
+}
+nav ul li a:hover{
+    color: var(--second-color);
+}
+
+.menu-icon{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+#menu-bar{
+    display: flex;
+    align-items: center;
+}
+
+/* NAV-BAR ENDS HERE */
+/* ************************************************************************************* */
+
+
+
+
+/* responsive code */
+@media (max-width:992px){
+    .menu-icon{
+        display: block;
+    }
+    .nav-item{
+        position: absolute;
+        left: -100%;
+        height: 100vh;
+        top: 52px;
+        background-color: rgb(236, 233, 233);
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.50s ease-in;
+    }
+    nav ul{
+        padding: 0px 3%;
+    }
+    nav ul li{
+        padding: 10px 0;
+    }
+    .nav-item.show{
+        left: 0%;
+    }
+}
+
+
+
+
+
+
+
+
